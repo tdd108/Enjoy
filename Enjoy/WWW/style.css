@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.logo{
+    width: 125px;
+    height: 50px;
+    margin: 10px;
+}
+
+.search-bar{
+    display: flex;
+}
+
+.filters{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.restaurants{
+    flex-wrap: wrap;
+    /* flex: 1; */
+    width: 90%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: auto;
+    /* padding-left: 50px; */
+}
+
+.hotel-card{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    /* width : 500px; height : 248; */
+}
+
+.hotel-location{
+    background: orange;
+    width: 51px;
+    padding: 5px;
+    color: white;
+}
+
+.hotel-eta{
+    font-size: 12px;
+}
+
+.hotel-name{
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.hotel-tags{
+    font-size: 10px;
+    padding: 10px;
+}
+
+button.favourite {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* float: left; */
+    align-self: flex-end;
+    border: none;
+    position: absolute;
+    outline: transparent;
+}
+
+
+#fav-id{
+    background: white;
+}
+
+#fav-id-red{
+    background: red;
+}
+
+#search {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.show-fav{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    /* padding: 3px; */
+    color: white;
+    background: red;
+    border: 1px solid;
+    /* float: right; */
+    right: 10%;
+    /* margin-bottom: 20px; */
+    position: absolute;
+    outline: transparent;
+    /* margin: 100px; */
+}
+
+#sortby{
+    position: absolute;
+    padding: 10px;
+    left: 3%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    width: 500px;
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding : 20px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+
+
+
+
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 100px;
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    right: 0;
+    background-color: #f6f6f6;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
