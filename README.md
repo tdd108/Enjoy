@@ -8,6 +8,6 @@ Website is available at [Enjoy](https://tdd.my.to/uberate)
 
 Test account: 
 
-\temail: test@mail.com
+email: test@mail.com
   
-\tpassword: test123
+password: test123
